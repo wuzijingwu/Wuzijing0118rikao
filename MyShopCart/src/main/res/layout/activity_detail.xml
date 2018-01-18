@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <TextView
+        android:id="@+id/title"
+        android:padding="10dp"
+        android:text="商品详情"
+        android:gravity="center"
+        android:background="#ea6805"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_below="@+id/title"
+        android:id="@+id/detail_sdv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <LinearLayout
+        android:id="@+id/detail_linear"
+        android:layout_below="@id/detail_sdv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:minLines="2"
+            android:maxLines="2"
+            android:id="@+id/detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/detail_price"
+            android:textColor="#ea6805"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/detail_seller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:onClick="addCart"
+            android:text="加入购物车"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#f2ab1d"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="立即购买"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#ea6805"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>
